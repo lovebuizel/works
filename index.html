@@ -11,19 +11,25 @@
 	<script src="js/bootstrap.min.js"></script>
 
 	<script>
+        function openNav() {
+	    	document.getElementById("mySidenav").style.width = "300px";
+		};
+		function closeNav() {
+			document.getElementById("mySidenav").style.width = "0";
+		};
 		$(document).ready(function(){
-			 $("#go-top").click(function(){
-                $("html,body").stop().animate({"scrollTop":"0"},"slow");
+			$("#go-top").click(function(){
+            	$("html,body").stop().animate({"scrollTop":"0"},"slow");
             });
 		});
 	</script>
 </head>
 <body>
-	<div id="header" class="clearfix">
-		<div class="head-container">
+	<div id="header">
+		<div class="head-container clearfix">
 			<div id="logo" class="float-left">
 				<a href="#">
-					<img src="https://picsum.photos/112/100" alt="logo" style="height: 100px;">
+					<img src="https://picsum.photos/112/100" alt="logo">
 				</a>
 			</div>
 			<div id="nav" class="clearfix">
@@ -35,8 +41,18 @@
 					<li class="nav-link"><a href="#"><i class="icon-basket"></i>SHOP</a></li>
 					<li class="nav-link"><a href="#"><i class="icon-search"></i>SEARCH</a></li>
 				</ul>
-			</div>			
+			</div>
+			<div class="navdraw" onclick="openNav()">&#9776;</div>			
 		</div>
+	</div>
+	<div id="mySidenav" class="sidenav">
+		<a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="#">HOME</a>
+		<a href="#">FEATURES</a>
+		<a href="#">PRODUCT</a>
+		<a href="#">OUTLETS</a>
+		<a href="#">SHOP</a>
+		<a href="#">SEARCH</a>
 	</div>
 	<div class="header">
 		<div class="container clearfix">

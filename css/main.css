@@ -1,10 +1,12 @@
 /*Global*/
+
 .w-60 {
 	width: 60%;
 	margin: 0 auto;
 }
 /*#Header*/
 .head-container {
+	position: relative;
 	width: 80%;
 	margin: 0 auto;
 }
@@ -18,8 +20,73 @@
 .nav li a {
 	color: #333333;
 }
+.navdraw {
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size:56px;
+	cursor:pointer;
+	display:none;
+}
 #header a:hover {
     text-decoration: none;
+}
+#logo img {
+	width: 100%;
+}
+@media screen and (max-width: 992px) {
+	.nav {
+		line-height: 80px;
+	}
+	.nav li{
+	  	padding: 0 10px;
+	}
+	.nav li a {
+		font-size: 0.5rem;
+	}
+	#logo{
+		width: 90px;
+ 	}
+ }
+ @media screen and (max-width: 768px){
+ 	#nav {
+ 		display: none;
+ 	}
+ 	.navdraw {
+ 		display: block;
+ 	}
+ }
+ /*sidenav*/
+ .sidenav {
+    height: 100%;
+    width: 0px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgba(11,11,11,.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+.sidenav a {
+    padding: 8px 32px 8px 48px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.sidenav a:hover {
+    color: #f1f1f1;
+    text-decoration:none;
+}
+ .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
 }
 /*.header*/
 .header {
