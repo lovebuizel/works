@@ -91,7 +91,7 @@
 /*.header*/
 .header {
 	padding: 200px 0;
-	background-image: url(https://picsum.photos/1920/1080);
+	background-image: url(../img/img01.jpg);
 	background-size: cover;
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
@@ -357,5 +357,4 @@
     text-align: center;
     text-decoration: none;
     width: 40px;
-
 }
